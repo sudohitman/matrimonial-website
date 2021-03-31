@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Signup
+{% endblock %}
+
+
+
+{% block content %}
+<div class="container my-4 ">
+<div class="signup-form" >
+    <form method="post">
+	{% csrf_token %}
+		<h2>Register</h2>
+		<p class="hint-text">Create your account. It's free and only takes a minute.</p>
+        <div class="form-group">
+			{{ form.as_p}}
+		</div>
+		<div class="form-group">
+            <button type="submit" class="btn btn-success btn-lg btn-block">Register Now</button>
+        </div>
+    </form>
+	<div class="text-center">Already have an account? <a href="/loggin">Sign in</a></div>
+</div>
+</div>
+{% endblock %}
